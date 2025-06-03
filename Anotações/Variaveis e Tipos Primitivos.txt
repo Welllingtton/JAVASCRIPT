@@ -1,12 +1,12 @@
 window.alert(' ') - vai pingar um alerta na tela antes de mostrar o site em si.
 window.confirm(' ') - vai aparecer uma mensagem para confirmar ou negar com botões 'ok' e 'cancel'.
-window.prompt(' ') - vai tornar possível que o usuário escreva algo na mensagem que aparecerá. Vai tratar qualquer dado que for inserido como 'string'
+window.prompt(' ') - vai tornar possível que o usuário escreva algo na mensagem que aparecerá. Vai tratar qualquer dado que for inserido como 'string'.
 = -> 'recebe', atribui valor a uma variável.
 + -> Concatenação se os valores forem do tipo 'string';
      Adição se os dois valores forem do tipo 'number'.
 `` -> Interpolação. Usa-se a crase para colocar variáveis dentro da mensagem que irá ser mostrada ao usuário com ${}.
-document.write() - Vai escrever diretamente no programa
-function ação() - para criar interações no site dependendo da ação que for escolhida
+document.write() - Vai escrever diretamente no programa.
+function ação() - para criar interações no site dependendo da ação que for escolhida.
 .addEventListener() - cria uma ação no lugar de criar várias ações no espaço da div.
 break - quebra o fluxo da condicional ou repetição e dá continuidade no código.
 var agora = new Date() - atribui para a variável 'agora' a data e hora do sistema em que está rodando.

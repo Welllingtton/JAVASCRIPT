@@ -1,0 +1,19 @@
+ESTRUTURA DE CONTROLE
+ - Sequencial: Quando os comandos são executados um após o outro em ordem de escrita.
+ - Condições: Executa um bloco de comando se uma condição for verdadeira, caso falsa, executará um outro bloco de comandos.
+ - Repetições: Executará sempre o mesmo bloco de comandos em forma de loop enquanto a condição for verdadeira, caso falsa, o loop cessará.
+Ex.: 
+While - Estrutura de repetição com teste lógico no início
+while (condição) {
+comandos
+}
+
+Do-while - Estrutura de repetição com teste lógico depois do bloco de comando
+do {
+comandos
+} while (condição)
+
+For - Muito usado quando se sabe o limite de repetição do bloco
+for(inicio; teste; incremento) {
+comandos
+}

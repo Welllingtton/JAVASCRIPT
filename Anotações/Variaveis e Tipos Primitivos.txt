@@ -1,0 +1,51 @@
+window.alert(' ') - vai pingar um alerta na tela antes de mostrar o site em si.
+window.confirm(' ') - vai aparecer uma mensagem para confirmar ou negar com botões 'ok' e 'cancel'.
+window.prompt(' ') - vai tornar possível que o usuário escreva algo na mensagem que aparecerá. Vai tratar qualquer dado que for inserido como 'string'
+= -> 'recebe', atribui valor a uma variável.
++ -> Concatenação se os valores forem do tipo 'string';
+     Adição se os dois valores forem do tipo 'number'.
+`` -> Interpolação. Usa-se a crase para colocar variáveis dentro da mensagem que irá ser mostrada ao usuário com ${}.
+document.write() - Vai escrever diretamente no programa
+function ação() - para criar interações no site dependendo da ação que for escolhida
+.addEventListener() - cria uma ação no lugar de criar várias ações no espaço da div.
+break - quebra o fluxo da condicional ou repetição e dá continuidade no código.
+var agora = new Date() - atribui para a variável 'agora' a data e hora do sistema em que está rodando.
+var hora = agora.getHours() - das informações atribuídas a variável 'agora', esse comando vai pegar apenas a hora. É possível pegar outras informações como o dia da semana, etc.
+img id="imagem" src="nome_do_arquivo.ext" alt="nome alternativo para essa variável"
+var.focus() = deixa o cursor na área de escrita para escrever algo novamente.
+VARIÁVEL
+ -Identificadores
+	Podem começar com letra, $ ou _;
+	Não podem começar com números;
+	É possível usar letras ou números;
+	É possível usar acentos e símbolos;
+	Não podem conter espaços;
+	Não podem ser palavras reservadas, como nome de funções da linguagem.
+
+COMENTÁRIOS
+// - uma única linha
+/* mais de uma linha de código */
+
+TIPOS PRIMITIVOS
+number - números reais, independente se tem vírgula ou não 
+string - para letras e palavras
+boolean - para valores de 'true' ou 'false'
+
+CONVERSÃO DE TIPOS
+- String > Number
+Number.parseInt(n) ou Number(n) - para transformar para o tipo 'int' - inteiro
+Number.parseFloat(n) ou Number(n) - para transformar para o tipo 'float' - com vírgula
+
+- Number > String
+String(n) ou n.toString() - Para transformar para o tipo 'string' - letras e palavras
+
+TRATAMENTO DE VARIÁVEIS
+var s = 'alguma coisa'
+s.length - Diz quantos caracteres a string tem;
+s.toUpperCase() - Deixa tudo em MAIÚSCULO;
+s.toLowerCase() - Deixa tudo em minúsculo;
+<strong></strong> - Deixa as letras em negrito;
+-Para números
+s.toFixed(x) - Deixa o número com x quantidades de casas decimais depois da vírgula;
+s.toFixed(x).replace('.', ',') - No JavaScript, usa-se '.' para separar casas decimais. Esse comando troca o ponto pela virgula, se for necessário.
+s.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) - Este comando formata qualquer valor exige em forma de dinheiro, independente da moeda.

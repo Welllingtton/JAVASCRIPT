@@ -1,0 +1,12 @@
+São ações executadas assim que são chamadas ou em decorrência de algum evento.
+Pode receber parâmetros e retornar um resultado.
+Em funções há a Chamada, o Parâmetro e o Retorno.
+Ex.:
+'function soma(n1=0, n2=0) {
+    return n1 + n2
+}
+console.log(soma(3, 4))'
+
+soma(3, 4) - é a CHAMADA;
+3, 4 - são os parâmetros;
+n1 + n2 - é o que vai retornar após eu fizer a chamada e passar os parâmetros.

@@ -1,0 +1,16 @@
+VARIÁVEIS
+ - Simples: A variável só pode guardar um valor.
+ - Composta: Uma variável que tem vários elementos. Cada elemento é composto por seu valor e por uma chave de identificação
+Ex.: let num = [ , , ] - essa array tem 3 espaços de índices 0, 1, 2.
+num.push(6) - está adicionando mais um espaço e o elemento '6' na array.
+num.length - dirá quantos elementos há na array.
+num.sort() - vai ordenar os números da array.
+num.indexOf(3) - vai buscar e dizer em que posição está o elemento '3' na array. e este comando deve ser atribuído a uma variável.
+
+PERCURSO DE EXIBIÇÃO DE VETORES
+let valores = [ , , , , , , ]
+
+for (let pos in valores) {
+    console.log(`A posição ${pos} tem o valor ${valores[pos]}.`)
+}
+

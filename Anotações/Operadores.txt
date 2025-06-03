@@ -1,0 +1,48 @@
+ARITMÉTICOS
++ -> Soma
+- -> Subtração
+* -> Multiplicação
+/ -> Divisão
+% -> Resto da divisão
+** -> Potência
+= -> Atribuição
+
+ORDEM DE PRESCEDÊNCIA DOS OPERADORES ARITMÉTICOS
+() -> Parênteses;
+** -> Potência;
+*; /, % -> Multiplicação, Divisão e Resto da divisão;
++, - -> Adição e Subtração;
+
+
+INCREMENTO
+var x = 5
+x = x + 1 -> x = 6 ou x += 1 -> x = 6 ou x++(pós incremento)
+x = x - 1 -> x = 4 ou x -= 1 -> x = 4 ou --x(pré-incremento)
+
+
+RELACIONAIS
+> -> Maior ou menor 
+< -> Maior ou menor
+>= -> Maior igual ou menor igual
+<= -> Maior igual ou menor igual
+== -> Igualdade
+!= -> Diferença
+Todos esses operadores retornará valores booleanos como 'true' ou 'false'.
+
+
+LÓGICOS
+! - Negação
+&& - Conjunção ('e' lógico)
+|| - Disjunção ('ou' lógico)
+Seguindo essa mesma ordem de precedência.
+
+
+ORDEM DOS OPERADORES
+Se numa mesma expressão, a ordem é ARITMÉTICOS, RELACIONAIS, LÓGICOS. 
+
+TERNÁRIO
+Composto por dois símbolos '?' e ':'.
+           Teste ? true : false
+Teste lógico verdadeiro ou falso ? O que acontece se for verdadeiro : O que acontece se for falso
+Ex.:
+média >= 7.0 ? "Aprovado" : "Reprovado"

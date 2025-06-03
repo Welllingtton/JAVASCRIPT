@@ -1,0 +1,34 @@
+DOM é a arvore genealógica de site/programa que está sendo criado
+Um objeto que gera um galho para baixo é chamado de pai e o objeto criado é chamado de filho
+Ex.: ex005
+window
+ -location
+ -document
+   -html
+     -head
+       -meta
+       -title
+     -body
+       -h1
+       -p
+       -p
+         -stong
+       -div
+ -history
+
+FORMA DE SELEÇÃO DE OBJETOS COM JAVASCRIPT
+var p1
+-Por Marca: getElementsByTagName('p1')[número do objeto no código] - o número do objeti do código é apenas se o Elements estiver no plural, indicando vários objetos.
+            document.write(p1.innerHTML) - pega o código HTML inteiro e mostra na tela o que foi submetido ao p1
+
+-Por ID: getElementById('') 
+-Por Nome: getElementsByName('')[]
+-Por classe:getElementsByClassName
+-Por Seletor: querySelector() ou querySelectorAll(id - #; class- .) - Mais recomendada pra uso.
+
+
+
+
+
+
+

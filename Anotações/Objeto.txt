@@ -1,5 +1,5 @@
-É declarada com chaves '{}'
-O objeto é heterogêneo e pode gardar muitos tipos de dados desde string até funções.
+É declarada com chaves '{}' ou colchetes '[]'.
+O objeto é heterogêneo e pode guardar muitos tipos de dados desde string até funções.
 Ex.:
 let amigo = {nome:'José', sexo:'M', peso:'85.4', engordar(p){}}
 Em cada espaço foi dado um atributo e seus respectivos valores

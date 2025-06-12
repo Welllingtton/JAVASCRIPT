@@ -10,3 +10,11 @@ console.log(soma(3, 4))'
 soma(3, 4) - é a CHAMADA;
 3, 4 - são os parâmetros;
 n1 + n2 - é o que vai retornar após eu fizer a chamada e passar os parâmetros.
+
+
+METODO
+Quando as funções recebem as propriedades de um objeto.
+  .push() - Adiciona elementos a uma array.
+  .reverse() - Inverte a ordem dos elementos..
+
+wellingtu.ads@ares.edu.pl

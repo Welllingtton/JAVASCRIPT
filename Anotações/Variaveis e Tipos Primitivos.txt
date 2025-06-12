@@ -45,7 +45,12 @@ s.length - Diz quantos caracteres a string tem;
 s.toUpperCase() - Deixa tudo em MAIÚSCULO;
 s.toLowerCase() - Deixa tudo em minúsculo;
 <strong></strong> - Deixa as letras em negrito;
+
 -Para números
 s.toFixed(x) - Deixa o número com x quantidades de casas decimais depois da vírgula;
 s.toFixed(x).replace('.', ',') - No JavaScript, usa-se '.' para separar casas decimais. Esse comando troca o ponto pela virgula, se for necessário.
 s.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) - Este comando formata qualquer valor exige em forma de dinheiro, independente da moeda.
+
+
+PÁGINA 74
+

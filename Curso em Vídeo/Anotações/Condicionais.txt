@@ -1,0 +1,43 @@
+if/else
+Use a declaração if para executar alguma declaração caso a condição lógica for verdadeira. Use a cláusula opcional else para executar alguma declaração caso a condição lógica for falsa.
+
+if (condicao) {
+  declaracao_1;
+} else {
+  declaracao_2;
+}
+
+Você pode também combinar declarações utilizando else if para obter várias condições testadas em sequência, como o seguinte:
+
+if (condicao) {
+  declaracao_1;
+} else if (condicao_2) {
+  declaracao_2;
+} else if (condicao_n) {
+  declaracao_n;
+} else {
+  declaracao_final;
+}
+
+
+
+
+switch
+É mais usado com informações pontuais, números inteiros e strings.
+
+switch(expressão) {
+ case valo1:
+    *comandos*
+     break
+ case valo2:
+    *comandos*
+     break
+ case valo3:
+    *comandos*
+     break
+ default:
+    *comandos*
+     break
+}
+
+Caso contrário, use if/else

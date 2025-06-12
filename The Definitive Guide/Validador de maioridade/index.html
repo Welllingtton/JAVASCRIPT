@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Maioridade</title>
+</head>
+<body>
+    <h1>Validador de Maioridade</h1>
+    <h2>Veja se você é maior de idade ou não.</h2>
+    Em que ano você nasceu: <input type="number" name="nasc" id="nasc">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var ano = new Date
+            var atual = ano.getFullYear()
+            var nasc = document.querySelector('#nasc')
+            var res = document.querySelector('#res')
+            var num1 = Number(nasc.value)
+            var num2 = atual
+            var idade = num2 - num1
+            if (idade >= 18) {
+                res.innerHTML=`Esse ano você completa ${idade} anos. Você é maior de idade.`   
+            } else {
+                res.innerHTML=`Esse ano você completa ${idade} anos. Você ainda é menor de idade, depende da autorização dos seus pais`
+            }
+        }
+    </script>
+</body>
+</html>

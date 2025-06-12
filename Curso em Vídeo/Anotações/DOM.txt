@@ -28,7 +28,11 @@ var p1
 
 
 
-
-
-
+EVENTOS
+mouseenter - quando o mouse entra no entra no espaço da div.
+mousemove - quando o mouse se mexe no espaço da div.
+mousedown - quando se clica e segura o click na div.
+mouseup - quando se solta o click do mouse.
+click - movimento inteiro do click do mouse.
+mouseout - quando o mouse sai do espaço da div.
 

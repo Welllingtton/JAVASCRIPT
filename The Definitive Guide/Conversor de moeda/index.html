@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Conversor de moedas</title>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Conversor de moeda</h1>
+        <h2>Converta de Reais(R$) para Dólar(U$).</h2>
+        <div id="formulario">
+            Reais: <input type="number" name="din" id="din">
+            <input type="button" value="Converter" onclick="converter()">
+        </div>
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function converter() {
+            var real = document.querySelector('#din')
+            var res = document.querySelector('#res')
+            var real = Number(din.value)
+            var dolar = real / 5.54;
+            res.innerHTML=`R$${real} reais são U$${dolar.toFixed(2)} dólares.`
+        }
+    </script>
+</body>
+</html>

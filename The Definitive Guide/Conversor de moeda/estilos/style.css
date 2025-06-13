@@ -25,12 +25,47 @@ body {
     width: 440px;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.459);
     text-align: center;
     transform: translate(-50%, -50%);
 }
 
 #corpo > h2 {
-    font-weight: normal;
+    font: 1em normal;
     padding: 7px;
 }
+
+.campo {
+    display: block;
+    padding: 7px;
+    height: 100%;
+    width: 100%;
+    font: 1.2em normal arial;
+}
+
+#din {
+    padding: 7px 20px;
+}
+
+#botao {
+    padding: 7px 20px;
+    margin-bottom: 7px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(161, 161, 161);
+}
+
+#botao:hover {
+    background-color: rgb(110, 110, 110);
+    transition-duration: .3s;
+}
+
+#res {
+    font: 1.4em normal arial;
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+

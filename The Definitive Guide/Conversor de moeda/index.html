@@ -8,24 +8,31 @@
 </head>
 <body>
     <div id="corpo">
-        <h1>Conversor de moeda</h1>
-        <h2>Converta de Reais(R$) para Dólar(U$).</h2>
-        <div id="formulario">
-            Reais: <input type="number" name="din" id="din">
-            <input type="button" value="Converter" onclick="converter()">
-        </div>
-    </div>
-    <div id="res">
+        <section id="formulario" >
+            <h1>Conversor de Moeda</h1>
+            <h2>Converta de Reais(R$) para Dólar(U$)</h2>
+            <form action="#" method="post" autocomplete="on">
+                <div class="campo">
+                    <Label for="din">Reais:</Label>
+                    <input type="number" name="din" id="din" placeholder="R$" required>
+                </div>
+            </form>
+            <input type="submit" value="Converter" id="botao" onclick="converter()">
+        </section>
 
+        <section id="res">
+
+        </section>
+
+        <script>
+            function converter() {
+                var real = document.querySelector('#din')
+                var res = document.querySelector('#res')
+                var real = Number(din.value)
+                var dolar = real / 5.54;
+                res.innerHTML=`R$${real} reais são U$${dolar.toFixed(2)} dólares.`
+            }
+        </script>
     </div>
-    <script>
-        function converter() {
-            var real = document.querySelector('#din')
-            var res = document.querySelector('#res')
-            var real = Number(din.value)
-            var dolar = real / 5.54;
-            res.innerHTML=`R$${real} reais são U$${dolar.toFixed(2)} dólares.`
-        }
-    </script>
 </body>
 </html>

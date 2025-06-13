@@ -234,3 +234,188 @@ fora do laço:
 		return result;
 	}
 	oddsums(5); // Retorna [1,4,9,16,25]
+
+
+
+CONDICIONAIS
+ - for
+A instrução cria um loop com 3 expressões opcionais:
+	for (expression 1; expression 2; expression 3) {
+  		// bloco de código a ser executado
+	}
+
+A expressão 1 é executada (uma vez) antes da execução do bloco de código.
+A expressão 2 define a condição para executar o bloco de código.
+A expressão 3 é executada (todas as vezes) após a execução do bloco de código.
+Exemplo
+	for (let i = 0; i < 5; i++) {
+  	   text += "The number is " + i + "<br>";
+	}
+No exemplo acima, você pode ler:
+A expressão 1 define uma variável antes do início do loop (let i = 0).
+A expressão 2 define a condição para que o loop seja executado (i deve ser menor que 5).
+A expressão 3 aumenta um valor (i++) cada vez que o bloco de código no loop tem foi executado.
+
+Como usar a Expressão 1
+A expressão 1 é usada para inicializar a(s) variável(is) usada(s) no loop (let i = 0).
+Mas, a expressão 1 é opcional. Você pode omitir a expressão 1 quando seus valores são definidos antes do início do loop:
+Exemplo
+	let i = 2;
+	let len = cars.length;
+	let text = "";
+	for (; i < len; i++) {
+  	   text += cars[i] + "<br>";
+	}
+
+
+Como usar a Expressão 2
+A expressão 2 é usada para avaliar a condição da variável inicial (i < len).
+Mas, a expressão 2 também é opcional.
+Se a expressão 2 retornar true, o loop será iniciado novamente. Se retornar false, o loop terminará.
+
+Se você omitir a expressão 2, deverá fornecer uma quebra dentro do laço (break). Caso contrário, o loop nunca terminará. Isso travará seu navegador.
+
+
+Como usar a Expressão 3
+A expressão 3 incrementa o valor da variável inicial (i++). Mas, a expressão 3 também é opcional. A expressão 3 pode fazer qualquer coisa como incremento negativo (i--), positivo incremento (i = i + 15) ou qualquer outra coisa.
+A expressão 3 também pode ser omitida (como quando você incrementa seus valores dentro do loop):
+Exemplo
+	let i = 0;
+	let len = cars.length;
+	let text = "";
+	for (; i < len; ) {
+  	   text += cars[i] + "<br>";
+  	   i++;
+	}
+
+
+- for in
+A instrução JavaScript percorre as propriedades de um objeto:
+Sintaxe
+	for (key in object) {
+  	   // code block to be executed
+	}
+Exemplo
+	const person = {fname:"John", lname:"Doe", age:25};
+
+	let text = "";
+	for (let x in person) {
+	  text += person[x];
+	}
+Exemplo explicado
+ - O loop for in itera sobre um objeto de pessoa.
+ - Cada iteração retorna uma chave (x).
+ - A chave é usada para acessar o valor da chave.
+ - O valor da chave é person[x].
+
+A instrução JavaScript também pode fazer um loop sobre as propriedades de um Array:
+Sintaxe
+	for (variable in array) {
+	  code
+	}
+Exemplo
+	const numbers = [45, 4, 9, 16, 25];
+
+	let txt = "";
+	for (let x in numbers) {
+	  txt += numbers[x];
+	}
+Não use for em mais de uma matriz se a ordem do índice for importante.
+A ordem do índice depende da implementação e os valores da matriz podem não ser acessados na ordem esperada.
+É melhor usar um loop for, um loop for of ou Array.forEach() quando a ordem é importante.
+
+
+- Array.forEach()
+O método chama uma função (uma função de retorno de chamada) uma vez para cada elemento da matriz.
+Exemplo
+	const numbers = [45, 4, 9, 16, 25];
+
+	let txt = "";
+	numbers.forEach(myFunction);
+
+	function myFunction(value, index, array) {
+	  txt += value;
+	}
+Observe que a função recebe 3 argumentos:
+
+O valor do item
+O índice do item
+A matriz em si
+
+O exemplo acima usa apenas o parâmetro value. Ele pode ser reescrito para:
+Exemplo
+	const numbers = [45, 4, 9, 16, 25];
+
+	let txt = "";
+	numbers.forEach(myFunction);
+
+	function myFunction(value) {
+	  txt += value;
+	}
+
+
+- for of 
+Ele permite que você faça um loop sobre estruturas de dados iteráveis como Arrays, Strings, Maps, NodeLists e muito mais.
+Sintaxe
+	for (variable of iterable) {
+	  // code block to be executed
+	}
+variável - Para cada iteração, o valor da próxima propriedade é atribuído à variável. A variável pode ser declarada com , , ou .constletvar
+
+iterable - Um objeto que tem propriedades iteráveis.
+
+Loop sobre uma matriz
+Exemplo
+	const cars = ["BMW", "Volvo", "Mini"];
+
+	let text = "";
+	for (let x of cars) {
+	  text += x;
+	}
+
+
+Looping sobre uma cadeia de caracteres
+Exemplo
+	let language = "JavaScript";
+
+	let text = "";
+	for (let x of language) {
+	   text += x;
+	}
+
+
+- while
+O loop percorre um bloco de código, desde que uma condição especificada seja verdadeira.
+Sintaxe
+	while (condition) {
+	  // code block to be executed
+	}
+Exemplo
+No exemplo a seguir, o código no loop será executado, repetidamente, desde que Uma variável (i) é menor que 10:
+	while (i < 10) {
+	  text += "The number is " + i;
+	  i++;
+	}
+Se você esquecer de aumentar a variável usada na condição, o loop nunca terminará. Isso travará seu navegador.
+
+
+- do while
+O loop é uma variante do loop while. Este loop irá executar o bloco de código uma vez, antes de verificar se a condição é verdadeira, então ele irá repetir o loop desde que a condição seja verdadeira.
+Sintaxe
+	do {
+	  // code block to be executed
+	}
+	while (condition);
+Exemplo
+O exemplo abaixo usa um loop. O loop sempre será executado pelo menos uma vez, mesmo que a condição seja falsa, porque o bloco de código é executado antes que a condição seja testada.
+	do {
+	  text += "The number is " + i;
+	  i++;
+	}
+	while (i < 10);
+Não se esqueça de aumentar a variável utilizada na condição, caso contrário o loop nunca vai acabar!
+
+
+
+
+

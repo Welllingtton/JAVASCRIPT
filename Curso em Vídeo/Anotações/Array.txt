@@ -14,3 +14,364 @@ for (let pos in valores) {
     console.log(`A posição ${pos} tem o valor ${valores[pos]}.`)
 }
 
+PORQUE USAR ARRAYS?
+Se você tiver uma lista de itens (uma lista de nomes de carros, por exemplo), armazenar o carros em variáveis únicas podem ter esta aparência:
+
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+
+No entanto, e se você quiser percorrer os carros e encontrar um específico? E se você não tivesse 3 carros, mas 300?
+A solução é uma matriz!
+Um array pode conter muitos valores sob um único nome, e você pode Acesse os valores referindo-se a um número de índice.
+
+
+ - Criando uma matriz
+Usar um literal de array é a maneira mais fácil de criar um array JavaScript.
+
+Sintaxe:
+const array_name = [item1, item2, ...];
+  
+É uma prática comum declarar matrizes com a palavra-chave const.
+Espaços e quebras de linha não são importantes. Uma declaração pode abranger várias linhas:
+
+Exemplo
+const cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];
+
+Você também pode criar uma matriz e, em seguida, fornecer os elementos:
+
+Exemplo
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+
+
+ - Acessando elementos de matriz
+Você acessa um elemento de matriz referindo-se ao número de índice:
+
+const cars = ["Saab", "Volvo", "BMW"];
+let car = cars[0];
+
+
+ - Alterando um elemento de matriz
+Esta instrução altera o valor do primeiro elemento em:cars
+
+cars[0] = "Opel";
+
+Exemplo
+const cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+
+
+ - Convertendo uma matriz em uma string
+O método JavaScript converte uma matriz em um string de valores de matriz (separados por vírgula).toString()
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+Resultado:
+Banana,Orange,Apple,Mango
+
+
+ - Acesse o array completo
+Com JavaScript, a matriz completa pode ser acessada consultando a matriz nome:
+
+Exemplo
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+
+ - Arrays são objetos
+Arrays são um tipo especial de objetos. O operador em JavaScript retorna "object" para Matrizes.typeof
+
+Mas, as matrizes JavaScript são melhor descritas como matrizes.
+
+As matrizes usam números para acessar seus "elementos". Neste exemplo, retorna John:person[0]
+
+Array:
+const person = ["John", "Doe", 46];
+
+Os objetos usam nomes para acessar seus "membros". Neste exemplo, retorna John:person.firstName
+
+Objeto:
+const person = {firstName:"John", lastName:"Doe", age:46};
+
+
+
+
+PROPRIEDADES DE ARRAYS
+ - A propriedade length
+A propriedade de uma matriz retorna o comprimento de uma matriz (o número de matrizes elementos).length
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+
+
+ - Acessando o último elemento da matriz
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[fruits.length - 1];
+
+
+ - Elementos de array em loop
+Uma maneira de percorrer um array é usando um loop:for
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+
+ - Adicionando elementos de matriz
+A maneira mais fácil de adicionar um novo elemento a uma matriz é usando o método:push()
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Lemon");
+
+
+O novo elemento também pode ser adicionado a uma matriz usando a propriedade:length
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[fruits.length] = "Lemon";
+
+
+
+AVISO!
+
+Adicionar elementos com índices altos pode criar "buracos" indefinidos em uma matriz:
+
+Exemplo
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";
+
+
+
+A DIFERENÇA ENTRE ARRAYS E OBJETOS
+Em JavaScript, as matrizes usam índices numerados.
+
+Em JavaScript, os objetos usam índices nomeados.
+
+Arrays são um tipo especial de objetos, com índices numerados.
+
+
+JAVASCRIPT NEW ARRAY()
+JavaScript tem um construtor de matriz embutido. new Array().
+Mas você pode usar com segurança.[]
+
+Essas duas instruções diferentes criam uma nova matriz vazia chamada points:
+const points = new Array();
+const points = [];
+
+Essas duas instruções diferentes criam uma nova matriz contendo 6 números:
+const points = new Array(40, 100, 1, 5, 25, 10);
+const points = [40, 100, 1, 5, 25, 10];
+
+
+ - Um erro comum
+const points = [40];  		// Criou uma array com um elemento.
+
+não é o mesmo que:
+const points = new Array(40);	// Criou uma array com 40 elementos indefinidos.
+
+
+MATRIZES E OBJETOS ANINHADOS
+Os valores em objetos podem ser arrays e os valores em arrays podem ser objetos:
+Exemplo
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+
+Para acessar arrays dentro de arrays, use um loop for-in para cada array:
+Exemplo
+for (let i in myObj.cars) {
+  x += "<h1>" + myObj.cars[i].name + "</h1>";
+  for (let j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j];
+  }
+}
+
+
+
+
+
+
+MÉTODOS BÁSICOS DE ARRAY
+
+ - Array length		// Retorna o comprimento de uma array.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits.length;
+
+
+ - Array toString()	// Converte uma array em uma sequencia de valores separada por vírgulas.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let myList = fruits.toString();
+
+Cada objeto JavaScript tem um método.toString()
+O método é usado internamente pelo JavaScript quando um objeto precisa ser exibido como um texto (como em HTML), ou quando um objeto precisa ser usado como uma cadeia de caracteres.toString()
+
+
+
+ - Array at()		// Retorna um elemento indexado de uma array.
+Exemplos
+Obtenha o terceiro elemento de frutas usando at():
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2);
+
+Obtenha o terceiro elemento das frutas usando []:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[2];
+
+É A MESMA COISA.
+
+
+
+ - Array join()		// Junta todos os elementos de uma array em uma string. Ele se comporta exatamente como 'toString()', mas, além disso, você pode especificar o separador.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+Resultado:
+Banana * Orange * Apple * Mango
+
+
+
+ - Array pop()		// Remove o último elemento de uma array.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+
+O método retorna o valor que foi "retirado"
+
+
+
+ - Array push()		// Adiciona um novo elemento no final da array.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+
+
+ - Array shift()	// Remove o primeiro elemento da array e "desloca" todos os outros elementos para um índice mais baixo.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+
+O método retorna o valor que foi "deslocado".
+
+
+ - Array unshift()	// Adiciona um novo elemento no início da array e "desloca" elementos mais antigos.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");
+
+
+
+ - Array delete()	// Cria furos indefinidos na array.
+Esse método deixa buracos no array. [delete() undefined]
+Em vez disso, use pop() ou shift().
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];
+
+
+
+
+ - Array concat()	// Cria uma nova array mesclado arrays existentes.
+Exemplo (mesclando duas arrays)
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+
+O método não altera as matrizes existentes. Ele sempre retorna uma nova matriz.
+O método pode usar qualquer número de argumentos de matriz.
+
+
+
+
+ - Array copyWithin()	// Copia elementos da array ara outra posição na array.
+Exemplos
+Copie para o índice 2, todos os elementos do índice 0:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+
+
+
+
+ - Array flat()		// Cria uma nova matriz a partir de elementos de subarrays.
+Exemplo
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+
+
+
+
+ - Array slice()	// Fatia uma parte da array.
+O método corta um pedaço de uma matriz em um novo array.
+Exemplo
+Corte uma parte de uma matriz a partir do elemento da matriz 1 ("Laranja"):
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+
+
+
+
+ - Array splice()	// Adiciona novos itens a uma array.
+Exemplo
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+O primeiro parâmetro (2) define a posição onde novos elementos devem ser adicionados (emendados).
+O segundo parâmetro (0) define quantos elementos devem ser removidos.
+O restante dos parâmetros ("Limão" , "Kiwi") definem os novos elementos a serem adicionados.
+O método retorna um array com os itens excluídos.
+
+
+
+ - Array toSpliced()	// Adiciona novos itens de uma array em uma nova array.
+O método Array toSpliced() é uma maneira segura de unir uma matriz sem alterar a matriz original.
+A diferença entre o novo método toSpliced() e o antigo método splice() é que o novo método cria uma nova matriz, mantendo a matriz original inalterada, enquanto o método antigo alterou a matriz original.
+
+Exemplo
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const spliced = months.toSpliced(0, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

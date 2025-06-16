@@ -1,7 +1,117 @@
-É declarada com chaves '{}' ou colchetes '[]'.
+É declarada com chaves '{}'.
 O objeto é heterogêneo e pode guardar muitos tipos de dados desde string até funções.
 Ex.:
 let amigo = {nome:'José', sexo:'M', peso:'85.4', engordar(p){}}
 Em cada espaço foi dado um atributo e seus respectivos valores
 nome - atributo
 Jóse - valor
+
+
+OBJETOS EM JS
+Objetos também são variáveis. Mas os objetos podem conter muitos Valores.
+Este código atribui muitos valores (Fiat, 500, branco) a um objeto chamado carro:
+
+Exemplo
+const car = {type:"Fiat", model:"500", color:"white"};
+
+É uma prática comum declarar objetos com a palavra-chave const.
+
+ - Objeto literal JavaScript
+Um objeto literal é uma lista de pares name:value dentro de chaves {}.
+Exemplos
+{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+
+
+ - Criando um objeto JavaScript
+Esses exemplos criam um objeto JavaScript com 4 propriedades:
+Exemplos
+// Create an Object
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+Este exemplo cria um objeto JavaScript vazio, e, em seguida, adiciona 4 propriedades:
+// Create an Object
+const person = {};
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+
+
+
+PROPRIEDADES DO OBJETO JS
+As propriedades são a parte mais importante dos objetos JavaScript.
+As propriedades podem ser alteradas, adicionadas, excluídas e algumas são somente leitura.
+
+
+ - Acessando propriedades do objeto
+Você pode acessar as propriedades do objeto de duas maneiras:
+
+objectName.propertyName
+	ou
+objectName["propertyName"]
+
+
+ - Adicionando novas propriedades
+Você pode adicionar novas propriedades a um objeto existente simplesmente dando a ele um valor:
+Exemplo
+person.nationality = "English";
+
+
+ - Excluindo propriedades
+A palavra-chave exclui uma propriedade de um objeto:delete
+Exemplo
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+delete person.age;
+
+
+ - Objetos aninhados
+Os valores de propriedade em um objeto podem ser outros objetos:
+Exemplo
+myObj = {
+  name:"John",
+  age:30,
+  myCars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+Você pode acessar objetos aninhados usando a notação de ponto ou a notação de colchetes:
+
+Exemplos
+myObj.myCars.car2;
+
+
+MÉTODOS DE OBJETO JS
+Métodos são ações que podem ser executadas em objetos.
+Métodos são definições de função armazenadas como valores de propriedade.
+Exemplo
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+No exemplo acima, 'this' refere-se ao objeto person.
+this.firstName significa a propriedade firstName de person.
+this.lastName significa a propriedade lastName de person
+
+RESUMINDO
+Objetos são contêineres para Propriedades e Métodos.
+
+As propriedades são chamadas de Valores.
+
+Métodos são funções armazenadas como propriedades.
+
+As propriedades podem ser valores primitivos, funções ou até mesmo outros objetos.
